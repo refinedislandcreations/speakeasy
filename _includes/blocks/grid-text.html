@@ -1,0 +1,16 @@
+
+  <!-----Grid with text-->
+
+  <section class="mt-20">
+    <div class="grid grid-cols-2  {% if block.column-number == 3 %} sm:grid-cols-3 {% endif %} gap-10 container mx-auto px-8 ">
+      {% for item in block.items %}
+        <div class="pb-10 ">
+            <h2 class="font-semibold uppercase text-lg pb-1"> {{item.title}} </h2>
+            <p> {{item.paragraph}} </p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+ 

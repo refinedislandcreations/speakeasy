@@ -1,0 +1,40 @@
+
+
+  
+  <!----------Contact-------------->
+  
+  
+  <div class="container mx-auto px-8 mt-20 sm:mt-32 mb-5 sm:mb-12">
+    <p class="text-3xl sm:text-5xl font-extrabold uppercase pb-8">{{block.title}}</p>
+  
+    <div class="flex flex-col sm:grid grid-cols-2">
+        <div class="sm:mr-8">
+          <form name="contact" method="POST" data-netlify="true" class="mb-4">
+            <div class="mb-2">
+              <input id="fname" name="fname" type="text" placeholder="{{block.name-placeholder}}" class="border-b-2 focus:border-b-black outline-none" />
+              <label for="fname" class="block"> {{block.name-label}} </label>
+            </div>
+          
+            <div class="mb-2">
+              
+              <input id="email" name="email" type="email" placeholder="{{block.email-placeholder}}" class="border-b-2 focus:border-b-black outline-none" />
+              <label for="email" class="block"> {{block.email-label}} </label>
+            </div>
+          
+            <div class="mb-4">
+              <label for="message" class="block"> {{block.message-label}} </label>
+              <textarea id="message" name="message" placeholder="{{block.message-placeholder}}" rows="6" class="min-w-full border-2 focus:border-black outline-none"></textarea>
+            </div>
+          
+            <input type="hidden" name="form-name" value="contact">
+          
+            <div class="{% if block.button-align == 'left' %} text-left {% else %} sm:text-right {% endif %}">
+              <button type="submit" class="btn-primary">{{block.button-text}}</button>
+            </div>
+          </form>
+        </div>
+        <div>
+          <img src="{{block.image}}" alt="{{block.image-alt}}" class="w-full h-50 sm:h-96 object-cover">
+        </div>
+    </div>
+  </div>

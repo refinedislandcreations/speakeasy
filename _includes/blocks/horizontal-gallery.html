@@ -1,0 +1,12 @@
+  <!----Gallery------->
+  
+  <div class="container mx-auto px-8 mt-5 sm:mt-10 flex overflow-x-auto gap-4">
+
+    {% for item in block.items %}
+    
+      <img src="{{item.image}}" alt="{{item.alt}}" class="w-2/3 sm:w-1/4 object-contain shrink-0">
+  
+    {% endfor %}
+      
+    
+  </div>
